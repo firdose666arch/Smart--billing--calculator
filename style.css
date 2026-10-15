@@ -1,0 +1,128 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2ff;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background: #4338ca;
+    color: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+form, .receipt {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px #00000010;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #4338ca;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px 4px 5px 0;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 5px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.receipt h2:last-of-type {
+    color: #15803d;
+}
+
+.error {
+    color: #b91c1c;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+@media (max-width: 520px) {
+    .container {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .product {
+        grid-template-columns: 1fr;
+    }
+
+    form, .receipt {
+        padding: 15px;
+    }
+}
+
+@media print {
+    form, header p, .receipt button {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .container {
+        margin: 0;
+        max-width: none;
+    }
+
+    .receipt {
+        box-shadow: none;
+    }
+}
+
